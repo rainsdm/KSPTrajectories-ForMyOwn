@@ -65,7 +65,7 @@ namespace Trajectories
         internal void UpdateVesselMass()
         {
             Profiler.Start("AeroModel.UpdateVesselMass");
-            // mass_ = vessel_.totalMass;       // this kills performance on vessel load, so we don't do that anymore
+            // mass_ = vessel_.totalMass;       // this kills performance on vessel load, so we don't do that anymore // 这样做会降低加载航天器时的性能，所以我们不再采用这种方式。
 
             mass_ = 0d;
             foreach (Part part in Trajectories.AttachedVessel.Parts)
